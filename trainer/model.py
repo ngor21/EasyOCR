@@ -1,8 +1,8 @@
 import torch.nn as nn
-from modules.transformation import TPS_SpatialTransformerNetwork
-from modules.feature_extraction import VGG_FeatureExtractor, RCNN_FeatureExtractor, ResNet_FeatureExtractor
-from modules.sequence_modeling import BidirectionalLSTM
-from modules.prediction import Attention
+from transformation import TPS_SpatialTransformerNetwork
+from feature_extraction import VGG_FeatureExtractor, RCNN_FeatureExtractor, ResNet_FeatureExtractor
+from sequence_modeling import BidirectionalLSTM
+from prediction import Attention
 
 class Model(nn.Module):
 
