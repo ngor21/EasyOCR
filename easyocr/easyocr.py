@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from .recognition import get_recognizer, get_text
-from .utils import group_text_box, get_image_list, calculate_md5, get_paragraph,\
+from recognition import get_recognizer, get_text
+from utils_easyocr import group_text_box, get_image_list, calculate_md5, get_paragraph,\
                    download_and_unzip, printProgressBar, diff, reformat_input,\
                    make_rotated_img_list, set_result_with_confidence,\
                    reformat_input_batched, merge_to_free
-from .config import *
-from bidi.algorithm import get_display
+from config import *
+# from bidi.algorithm import get_display
 import numpy as np
 import cv2
 import torch
@@ -236,7 +236,7 @@ class Reader(object):
         if detect_network in self.support_detection_network:
             self.detect_network = detect_network
             if self.detect_network == 'craft':
-                from .detection import get_detector, get_textbox
+                from detection import get_detector, get_textbox
             elif self.detect_network in ['dbnet18']:
                 from .detection_db import get_detector, get_textbox
             else:
